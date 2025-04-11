@@ -1,27 +1,17 @@
 import {Component} from '@angular/core';
 import {UserComponent} from './user.component';
+import { PuntounoComponent } from './puntouno/puntouno.component';
 
 @Component({
   selector: 'app-root',
   styleUrls: ['app.component.css'],
-  template: `
-  @if (isUserLogin) {
-    <span><app-user username="Luisa" /></span>
-    <section (mouseover)="onMouseOver()">
-      There's a secret message for you, hover to reveal 👀
-      {{ message }}
-    </section>
-    } @else {
-    <span>No Login. Users:</span>
-    <div> 
-    @for(user of users; track user.id) {
-    <p>{{user.id}}. {{ user.name }}</p>
-    }
-    </div>
-    <div class="divEditable" [contentEditable]="isEditable"></div>
-    } 
+  template: ` 
+   <!-- usamos el comonete uno para el pirmer ejercicio -->
+  <app-puntouno></app-puntouno>
   `,
-  imports: [UserComponent],
+
+  
+  imports: [UserComponent, PuntounoComponent],
 })
 export class AppComponent {
 isUserLogin= true;

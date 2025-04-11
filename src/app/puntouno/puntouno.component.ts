@@ -5,10 +5,14 @@ import { Component } from '@angular/core';
   imports: [],
   template: `
     <p>
-      puntouno works!
+      Hello universe
     </p>
   `,
-  styles: ``
+  styles: `
+  :host {
+    color: #a144eb
+  }
+  `
 })
 export class PuntounoComponent {
 
