@@ -1,15 +1,19 @@
 import {Component} from '@angular/core';
+import {FormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-user',
   template: `
-    <p>Nombre de usuario: {{ username }}</p>
+    <p>Nombre usuario: {{ username }}</p>
     <p>{{ username }}'s favorite framework: {{ favoriteFramework }}</p>
-    <label for="framework">Favorite Framework:</label>
+    <label for="framework">
+      Favorite Framework:
+      <input id="framework" type="text" [(ngModel)]="favoriteFramework" />
+    </label>
   `,
-  imports: [],
+  imports: [FormsModule],
 })
 export class UserComponent {
-  username = 'youngTech';
   favoriteFramework = '';
+  username = 'youngTech';
 }
