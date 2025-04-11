@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   imports: [],
   template: `
     <p>
-      Hello universe
+      Hello {{ city }}
     </p>
   `,
   styles: `

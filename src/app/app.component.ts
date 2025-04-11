@@ -1,31 +1,19 @@
 import {Component} from '@angular/core';
 import {UserComponent} from './user.component';
-import { PuntounoComponent } from './puntouno/puntouno.component';
 
 @Component({
   selector: 'app-root',
   styleUrls: ['app.component.css'],
+  // Punto uno meodificado de template 
   template: ` 
-   <!-- usamos el comonete uno para el pirmer ejercicio -->
-  <app-puntouno></app-puntouno>
+    Hello {{ city }}, {{1 + 1}}
   `,
 
   
-  imports: [UserComponent, PuntounoComponent],
+  imports: [UserComponent],
 })
-export class AppComponent {
-isUserLogin= true;
-users = [
-  {id: 0, name: 'Sarah'},
-  {id: 1, name: 'Amy'},
-  {id: 2, name: 'Rachel'},
-  {id: 3, name: 'Jessica'},
-  {id: 4, name: 'Poornima'},
-];
-isEditable = false;  
-message  = '';
 
-onMouseOver() {
-  this.message = 'Way to go 🚀';
-}
+// punto dos agregando una propiedad a la clase
+export class AppComponent {
+  city = 'San Francisco';
 }
