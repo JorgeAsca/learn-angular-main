@@ -1,8 +1,12 @@
 import {Component} from '@angular/core';
-// import {UserComponent,} from './user.component';
-
+import {UserComponent,} from './user.component';
+import {PuntoCuatroComponent} from './punto-cuatro/punto-cuatro.component';
+import { p } from '@angular/core/weak_ref.d-Bp6cSy-X';
 @Component({
+
   selector: 'app-root',
+  standalone: true,
+  imports: [PuntoCuatroComponent],
   // styleUrls: ['app.component.css'],
   // Punto uno meodificado de template 
   template: `
@@ -13,6 +17,7 @@ import {Component} from '@angular/core';
     <span>Server is not running</span>
   }
    `,
+   
     // <!-- punto dos --->
     // username: {{ username }} 
     // Hello {{ city }}, {{1 + 1}}
@@ -20,6 +25,7 @@ import {Component} from '@angular/core';
 
   
   // <!-- imports: [UserComponent], -->
+  
 })
 
 // punto dos agregando una propiedad a la clase
