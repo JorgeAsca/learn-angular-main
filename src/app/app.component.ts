@@ -7,7 +7,7 @@ import { p } from '@angular/core/weak_ref.d-Bp6cSy-X';
   selector: 'app-root',
   standalone: true,
   imports: [PuntoCuatroComponent],
-  // styleUrls: ['app.component.css'],
+  styleUrls: ['app.component.css'],
   // Punto uno meodificado de template 
   template: `
   <!-- Punto 4 flujo de control entre  comonentes -->
@@ -30,6 +30,8 @@ import { p } from '@angular/core/weak_ref.d-Bp6cSy-X';
 
 // punto dos agregando una propiedad a la clase
 export class AppComponent {
+  // se agrego para el ejercicio 6
+  isEditable = true;
   // Se agrego la propiedad isServerRunning para el punto 4
   isServerRunning = true;
   username = 'Jorge asca';
